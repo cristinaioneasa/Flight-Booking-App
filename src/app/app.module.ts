@@ -8,9 +8,11 @@ import {HttpClientModule} from "@angular/common/http";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatListModule} from '@angular/material/list';
 import {LoginComponent} from "./component/login/login.component";
-import {RegisterComponent} from "./component/register.component/register.component";
+import {RegisterComponent} from "./component/register/register.component";
 import {ClientComponent} from "./component/client/client.component";
 import {AdminComponent} from "./component/admin/admin.component";
+import {GuestComponent} from "./component/guest/guest.component";
+import {PasswordComponent} from "./component/password/password.component";
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import {AdminComponent} from "./component/admin/admin.component";
     LoginComponent,
     RegisterComponent,
     ClientComponent,
-    AdminComponent
+    AdminComponent,
+    GuestComponent,
+    PasswordComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,5 @@
 export class Flight{
-  id: number |undefined;
+  id: number | undefined;
   number: String | undefined;
   departure: String | undefined;
   arrival: String | undefined;
@@ -7,4 +7,5 @@ export class Flight{
   date_time_arrival: String |undefined;
   duration: number |undefined;
   nr_seats: number |undefined;
+  price: number |undefined;
 }

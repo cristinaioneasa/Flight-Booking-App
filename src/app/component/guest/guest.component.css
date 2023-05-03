@@ -1,8 +1,8 @@
 body{
   display: flex;
-  height: 100vh;
+  height: 112vh;
   width: 100vw;
-  background-image: url("images/background5.png");
+  background-image: url("images/background6.png");
 
 }
 #lista{
@@ -66,14 +66,6 @@ body{
   width: 200px;
   height: 40px;
 }
-#departure{
-  width: 200px;
-  height: 40px;
-}
-#button_departure{
-  width: 200px;
-  height: 40px;
-}
 #button_sort{
   width: 200px;
   height: 40px;
@@ -83,40 +75,12 @@ body{
   margin-top: -80px;
 }
 .price{
-  font-size: 25px;
-  margin-top: 50px;
+  margin-left: 500px;
+  margin-top: -70px;
+  font-size: 30px;
+  color: cornflowerblue;
 }
 .duration{
-  margin-top: -40px;
-}
-#button_buy{
-  margin-left: 475px;
-  margin-top: -30px;
-  width: 150px;
-  height: 40px;
-  color: azure;
-  background-color: cornflowerblue;
-  font-size: 30px;
-  justify-content: center;
-}
-#cos{
-  margin-left: 1520px;
-  margin-top: -80px;
-  width: 200px;
-  font-size: 25px;
+  margin-top: 30px;
 }
 
-#seat{
-  margin-left: 450px;
-}
-
-#logout{
-  margin-top: 50px;
-  width: 200px;
-  height: 40px;
-  background-color: blue;
-  color: white;
-  font-size: 20px;
-  border-color: white;
-  border-width: 3px;
-}

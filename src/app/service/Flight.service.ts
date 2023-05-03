@@ -20,9 +20,26 @@ export class FlightService{
     return this.httpClient.put<Flight>(this.baseURL + "/insertFlight", flight);
   }
 
+  deleteFlight(id: any){
+    //let params = new HttpParams().set('id', id);
+    // @ts-ignore
+    return this.httpClient.delete<Flight>(this.baseURL + "/deleteFlight?id=" + id)
+  }
+
+  findById(id:number){
+    let params = new HttpParams().set('id', id);
+    return this.httpClient.get(this.baseURL + "/findById" + {params: params})
+  }
+
   findByArrival(arrival: string){
-    let params = new HttpParams().set('arrival', arrival);
-    return this.httpClient.get(this.baseURL + "/findByArrival" + {params: params})
+    return this.httpClient.get<Flight[]>(this.baseURL + "/findByArrival?arrival=" + arrival)
+  }
+
+  findByDeparture(departure: string){
+    return this.httpClient.get<Flight[]>(this.baseURL + "/findByDeparture?departure=" + departure);
+  }
+  sortByPrice(){
+    return this.httpClient.get<Flight[]>(this.baseURL + "/sort");
   }
 
 }

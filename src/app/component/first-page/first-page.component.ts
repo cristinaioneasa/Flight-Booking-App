@@ -27,6 +27,7 @@ export class FirstPageComponent implements OnInit {
     },
       (_error)=> {
       });
+
     this.flightService.findByArrival("MILAN").subscribe();
     this.initOwnerCarsForm();
   }

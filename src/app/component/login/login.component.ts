@@ -20,10 +20,28 @@ export class LoginComponent implements OnInit {
   }
 
   loginUser() {
-    this.userService.loginUser(this.user).subscribe(data=>{
+    this.userService.loginUser(this.user).subscribe(data => {
       alert("User login successfully");
       this.router.navigateByUrl('/client');
-    },error => {
+      this.userService.userInfo = JSON.stringify(data);
+      const pattern = /"name"\s*:\s*"([^"]+)"/;
+      const match = this.userService.userInfo.match(pattern);
+      console.log(this.userService);
+      if (match) {
+        this.userService.userName = match[1];
+        console.log(this.userService.userName);
+      } else {
+        console.log("name not found");
+      }
+      const regex = /"username"\s*:\s*"([^"]+)"/;
+      const match2 = this.userService.userInfo.match(regex);
+      if (match2) {
+        this.userService.userEmail = match2[1];
+        console.log(this.userService.userEmail);
+      } else {
+        console.log("email not found");
+      }
+    }, error => {
       alert("Login failed");
     })
   }
